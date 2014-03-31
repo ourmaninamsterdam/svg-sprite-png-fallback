@@ -1,15 +1,22 @@
-/* Default CSS that all browsers will see */
+/* 
+  Default CSS that all browsers will see 
+*/
 .icon {
   background: url(img/sprite.png) transparent no-repeat;
 }
-/* Supporting browsers will be served the SVG */
+
+/* 
+  Supporting browsers will be served the SVG 
+*/
 svg ~ .icon, 
-svg ~ .container .icon {
+svg ~ .container .icon { /* .container to be replaced with your own selector */
   background-image: url(img/sprite.svg);
 }
+
+
 /* 
-  Used to hide the SVG and move out of the document flow
-  Taken from H5BP.
+  Used to hide the SVG and move it out of the document flow
+  Properties taken from H5BP.
 */
 .support-svg {
   position: absolute;
