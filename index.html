@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG Sprite with PNG fallback (without JavaScript)</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+</body>
+</html>
+<!-- 
+  Using CSS to detect for SVG support with PNG fallback.
+  Makes use of an empty dummy SVG and the general sibling selector to check for SVG supports and then serve an SVG.
+  Older browsers will just get a good 'ol PNG.
+  Perfect for use with icons.
+-->
+
+<!-- SVG detection - This is only required once for the entire document -->
+<svg class="support-svg"></svg>
+
+<!-- Can be the same level -->
+<span class="icon icon--joystick"></span>
+<span class="icon icon--player"></span>
+<span class="icon icon--power"></span>
+<span class="icon icon--remote"></span>
+
+<!-- Or nested ...
+<div class="container">
+  <span class="icon icon--joystick"></span>
+	<span class="icon icon--player"></span>
+	<span class="icon icon--power"></span>
+	<span class="icon icon--remote"></span>
+</div>
+-->

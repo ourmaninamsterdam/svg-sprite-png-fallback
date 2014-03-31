@@ -1,0 +1,50 @@
+/* Default CSS that all browsers will see */
+.icon {
+  background: url(img/sprite.png) transparent no-repeat;
+}
+/* Supporting browsers will be served the SVG */
+svg ~ .icon, 
+svg ~ .container .icon {
+  background-image: url(img/sprite.svg);
+}
+/* 
+  Used to hide the SVG and move out of the document flow
+  Taken from H5BP.
+*/
+.support-svg {
+  position: absolute;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  width: 1px; 
+}
+
+/* 
+  NOTE: Everything below here is just for styling and is not required for this technique to work 
+*/
+.icon {
+  background: transparent no-repeat;
+  display: inline-block;
+  height: 56px;
+  margin: 20px;
+  width: 56px;
+}
+
+.icon--joystick {  
+  background-position: 0 -172px;
+}
+
+.icon--player {
+  background-position: -198px 0;
+}
+
+.icon--remote {
+  background-position: 0 0;
+}
+
+.icon--power {
+  background-position: -198px -173px;
+}
