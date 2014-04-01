@@ -7,18 +7,18 @@
 
 /* 
   Supporting browsers will be served the SVG 
+  The .has-svg part of the class is not necessary but helps document the selector's intention
 */
-svg ~ .icon, 
-svg ~ .container .icon { /* .container to be replaced with your own selector */
+svg.has-svg ~ .icon, 
+svg.has-svg ~ .container .icon { /* .container can be replaced with your own selector */
   background-image: url(img/sprite.svg);
 }
-
 
 /* 
   Used to hide the SVG and move it out of the document flow
   Properties taken from H5BP.
 */
-.support-svg {
+.has-svg {
   position: absolute;
   border: 0;
   overflow: hidden;
@@ -33,7 +33,6 @@ svg ~ .container .icon { /* .container to be replaced with your own selector */
   NOTE: Everything below here is just for styling and is not required for this technique to work 
 */
 .icon {
-  background: transparent no-repeat;
   display: inline-block;
   height: 56px;
   margin: 20px;
