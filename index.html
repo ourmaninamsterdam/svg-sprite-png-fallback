@@ -7,13 +7,15 @@
 </head>
 <body>
 <!-- 
-  Using CSS to detect for SVG support with PNG fallback.
-  Makes use of an empty dummy SVG and the general sibling selector to check for SVG supports and then serve an SVG.
-  Older browsers will just get a good 'ol PNG.
-  Perfect for use with icons.
+	Using CSS to detect for SVG support. No JavaScript required.
+  Makes use of an empty dummy SVG and the general sibling selector to check for SVG support.
+  This example shows an SVG sprite with PNG fallback technique.
 -->
 
-<!-- SVG detection - This is only required once for the entire document -->
+<!-- 
+	SVG detection - This is only required once for the entire document 
+	The .has-svg isn't necessary for this technique but provides useful documentation
+-->
 <svg class="has-svg"></svg>
 
 <!-- Can be the same level -->
